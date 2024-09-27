@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flor Animada</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    </head>
+    <body>
+
+        <h1>Feliz cumpleaños</h1>
+
+        <div class="conteiner">
+            <div class="flower"> <!--Los petalos-->
+                <div class="leaf leaf-0"></div>
+                <div class="leaf leaf-1"></div>
+                <div class="leaf leaf-2"></div>
+                <div class="leaf leaf-3"></div>
+                <div class="leaf leaf-4"></div>
+                <div class="leaf leaf-5"></div>
+                <div class="leaf leaf-6"></div>
+                <div class="leaf leaf-7"></div>
+                <div class="leaf leaf-8"></div>
+                <div class="leaf leaf-9"></div>
+                <div class="leaf leaf-10"></div>
+                <div class="leaf leaf-11"></div>
+                <div class="leaf leaf-12"></div>
+                <div class="leaf leaf-13"></div>
+                <div class="leaf leaf-14"></div>
+                <div class="leaf leaf-15"></div>
+                <div class="dot"></div> <!--Centro-->
+            </div>
+        </div>
+
+        <audio controls autoplay loop>
+            <source src="Y2meta.app - Forest Blakk - If You Love Her (Official Music Video) (128 kbps).mp3" type="audio/mp3">
+        </audio>
+        <script>
+            // Seleccionamos la flor
+            const flower = document.querySelector('.flower');
+        
+            // Agregamos un listener para el evento click en la flor
+            flower.addEventListener('click', () => {
+                // Llamamos a la función de confeti
+                confetti({
+                    particleCount: 100, // Número de partículas
+                    spread: 70, // Área donde se distribuye el confeti
+                    origin: { y: 0.6 } // Ajuste de la altura desde donde aparece el confeti
+                });
+            });
+        </script>
+        
+    </body>
+</html>
